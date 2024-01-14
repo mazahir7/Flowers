@@ -1,0 +1,195 @@
+*,
+*::after,
+*::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	/* changes the 1REM from 16px to 10px */
+	font-size: 62.5%;
+}
+
+body {
+	font-family: "Roboto", sans-serif;
+	height: 100vh;
+	overflow: hidden;
+	background-color: #1e96fc;
+	position: relative;
+}
+
+.sun {
+	width: 10rem;
+	height: 10rem;
+	border-radius: 50%;
+	/* background-color: #fcf300; */
+	box-shadow: 0 0 42px #fff056;
+	position: absolute;
+	top: 0;
+	left: 50%;
+	transform: translate(-50%, 10%);
+	animation: sunEffect 1s infinite ease alternate;
+}
+
+@keyframes sunEffect {
+	0% {
+		background: linear-gradient(45deg, #fcf300 0%, orange 20%, #fcf300 100%);
+	}
+
+	20% {
+		background: linear-gradient(45deg, #fcf300 10%, orange 35%, #fcf300 100%);
+	}
+
+	40% {
+		background: linear-gradient(45deg, #fcf300 25%, orange 50%, #fcf300 100%);
+	}
+
+	60% {
+		background: linear-gradient(45deg, #fcf300 40%, orange 65%, #fcf300 100%);
+	}
+
+	80% {
+		background: linear-gradient(45deg, #fcf300 55%, orange 82%, #fcf300 100%);
+	}
+
+	100% {
+		background: linear-gradient(45deg, #fcf300 68%, orange 90%, #fcf300 100%);
+	}
+	/* 0% {
+		background: linear-gradient(45deg, #fcf300 0%, #fff 20%, #fcf300 100%);
+	}
+
+	20% {
+		background: linear-gradient(45deg, #fcf300 10%, #fff 35%, #fcf300 100%);
+	}
+
+	40% {
+		background: linear-gradient(45deg, #fcf300 25%, #fff 50%, #fcf300 100%);
+	}
+
+	60% {
+		background: linear-gradient(45deg, #fcf300 40%, #fff 65%, #fcf300 100%);
+	}
+
+	80% {
+		background: linear-gradient(45deg, #fcf300 55%, #fff 82%, #fcf300 100%);
+	}
+
+	100% {
+		background: linear-gradient(45deg, #fcf300 68%, #fff 90%, #fcf300 100%);
+	} */
+}
+
+.flower {
+	position: absolute;
+	bottom: 0;
+	left: 46%;
+
+	width: 8rem;
+	height: 30rem;
+	background-color: green;
+	clip-path: polygon(
+		58% 57%,
+		25% 30%,
+		37% 0,
+		56% 2%,
+		44% 18%,
+		53% 38%,
+		74% 51%,
+		66% 67%,
+		56% 100%,
+		40% 100%,
+		45% 85%,
+		46% 75%
+	);
+}
+
+.stigma {
+	position: absolute;
+	bottom: 28rem;
+
+	left: 47%;
+	width: 4rem;
+	height: 4rem;
+	background-color: #ffb703;
+	border-radius: 50%;
+}
+
+.petal-container {
+	position: relative;
+	width: 4rem;
+	height: 4rem;
+	background-color: transparent;
+	/* background-color: red; */
+	border-radius: 50%;
+
+	animation: rotate 1s infinite alternate ease-in-out;
+}
+
+@keyframes rotate {
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.petals {
+	position: absolute;
+	width: 4rem;
+	height: 12rem;
+	/* background-color: #fcf300; */
+	background: linear-gradient(to right, yellow 30%, rgb(44, 119, 44) 50%, yellow 100%);
+	border-radius: 90%;
+	transform-origin: bottom;
+	animation: petalSize 1s infinite alternate ease-in-out;
+}
+
+@keyframes petalSize {
+	to {
+		width: 6rem;
+	}
+}
+
+.p-1 {
+	top: -11.5rem;
+}
+
+.p-2 {
+	top: -10rem;
+	right: -1.8rem;
+	transform: rotate(90deg);
+}
+
+.p-3 {
+	top: -10rem;
+	left: -1.8rem;
+	transform: rotate(-90deg);
+}
+
+.p-4 {
+	top: 3.6rem;
+}
+
+.p-5 {
+	top: -11rem;
+	right: -1.1rem;
+	transform: rotate(45deg);
+}
+
+.p-6 {
+	top: -9rem;
+	right: -1rem;
+	transform: rotate(135deg);
+}
+
+.p-7 {
+	top: -11rem;
+	left: -1.2rem;
+	transform: rotate(-45deg);
+}
+
+.p-8 {
+	top: -9rem;
+	left: -1.2rem;
+	transform: rotate(-135deg);
+}
